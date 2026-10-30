@@ -52,12 +52,19 @@ export default function Index() {
         </Text>
       </View>
 
-      <Button
-        label="Sign Out"
-        variant="outline"
-        onPress={() => sessionManager.clearSession()}
-        style={styles.actionButton}
-      />
+      <View style={styles.buttonGroup}>
+        <Button
+          label="View & Edit Profile"
+          onPress={() => router.push('/profile')}
+          style={styles.actionButton}
+        />
+        <Button
+          label="Sign Out"
+          variant="outline"
+          onPress={() => sessionManager.clearSession()}
+          style={styles.actionButton}
+        />
+      </View>
     </ScreenWrapper>
   );
 }
